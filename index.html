@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="vitaelux.css"> <!-- Enlace a tu archivo CSS principal -->
+    <link rel="stylesheet" href="registro.css"> <!-- Enlace al archivo CSS para el registro -->
+</head>
+<body>
+    <div id="form-ui">
+        <form action="registro.php" method="POST" id="form">
+            <div id="form-body">
+                <div id="welcome-lines">
+                    <div id="welcome-line-1">VITAE LUX</div>
+                    <div id="welcome-line-2">Crea tu cuenta</div>
+                </div>
+                <div id="input-area">
+                    <div class="form-inp">
+                        <input name="nombre" placeholder="Nombre" type="text" required>
+                    </div>
+                    <div class="form-inp">
+                        <input name="apellido" placeholder="Apellidos" type="text" required>
+                    </div>
+                    <div class="form-inp">
+                        <input name="correo_electronico" placeholder="Correo Electrónico" type="email" required>
+                    </div>
+                    <div class="form-inp">
+                        <input name="contraseña" placeholder="Contraseña" type="password" required>
+                    </div>
+                
+                </div>
+                <div id="submit-button-cvr">
+                    <button name="insertar" id="submit-button" type="submit">Registrarse</button>
+                </div>
+                <div id="login-link">
+                    <p>¿Ya tienes una cuenta? <a href="inicio.html">Inicia sesión aquí</a></p>
+                </div>
+                <div id="bar"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

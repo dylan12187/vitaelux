@@ -1,0 +1,171 @@
+/* Selecciona todos los elementos para establecer propiedades comunes */
+* {
+    box-sizing: border-box; /* Incluye padding y borde dentro de las dimensiones totales del elemento */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
+/* Estilos generales del body */
+body {
+    display: flex; /* Usa Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-color: #000; /* Fondo negro para destacar el formulario */
+    color: #fff; /* Texto blanco para buena legibilidad */
+}
+
+/* Contenedor principal del formulario */
+#form-ui {
+    display: grid; /* Usamos Grid para centrar el contenido */
+    place-items: center; /* Centrado en ambas direcciones */
+    width: 90%; /* Ancho del formulario relativo a la pantalla */
+    max-width: 500px; /* Ancho máximo para evitar que se agrande en pantallas grandes */
+    padding: 25px; /* Relleno interior para espaciado */
+    background-color: #161616; /* Fondo gris oscuro */
+    box-shadow: 0px 15px 60px yellow; /* Sombra amarilla para efecto 3D */
+    outline: 1px solid yellow; /* Borde exterior amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Posicionamiento para elementos internos absolutos */
+}
+
+/* Área del formulario */
+#form-body {
+    width: 100%; /* Ancho completo del formulario */
+}
+
+/* Contenedor para las líneas de bienvenida */
+#welcome-lines {
+    text-align: center; /* Alineación centrada del texto */
+    line-height: 1; /* Altura de línea compacta */
+}
+
+/* Estilo del título de bienvenida */
+#welcome-line-1 {
+    color: yellow; /* Texto en amarillo */
+    font-weight: 600; /* Negrita */
+    font-size: 40px; /* Tamaño grande para el título */
+}
+
+/* Estilo del subtítulo de bienvenida */
+#welcome-line-2 {
+    color: rgb(255, 255, 255); /* Texto en amarillo */
+    font-size: 18px; /* Tamaño de fuente más pequeño */
+    margin-top: 17px; /* Espaciado superior */
+}
+
+/* Área de campos de entrada */
+#input-area {
+    margin-top: 40px; /* Espacio entre las líneas de bienvenida y los campos de entrada */
+}
+
+/* Estilo de los campos de entrada */
+.form-inp {
+    padding: 11px 25px; /* Espaciado interno en ambos lados */
+    background: transparent; /* Fondo transparente */
+    border: 1px solid yellow; /* Borde amarillo */
+    line-height: 1; /* Altura de línea compacta */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Enfoque de los campos de entrada */
+.form-inp:focus {
+    border: 1px solid yellow; /* Mantiene el borde amarillo al enfocar */
+}
+
+/* Estilo del primer campo de entrada */
+.form-inp {
+    margin-bottom: 15px; /* Espaciado inferior para separar los campos */
+}
+
+/* Estilos para las entradas de texto internas */
+.form-inp input {
+    width: 100%; /* Ancho completo del contenedor */
+    background: none; /* Fondo transparente */
+    font-size: 13.4px; /* Tamaño de fuente pequeño */
+    color: yellow; /* Texto en amarillo */
+    border: none; /* Sin borde adicional */
+    padding: 0;
+    margin: 0;
+}
+
+/* Enfoque en las entradas de texto internas */
+.form-inp input:focus {
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/* Contenedor del botón de envío */
+#submit-button-cvr {
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilo del botón de envío */
+#submit-button {
+    display: block; /* Se muestra como bloque ocupando el ancho completo */
+    width: 100%; /* Ancho completo del contenedor */
+    color: yellow; /* Texto amarillo */
+    background-color: transparent; /* Fondo transparente */
+    font-weight: 600; /* Negrita */
+    font-size: 14px; /* Tamaño de fuente */
+    margin: 0;
+    padding: 14px 13px 12px 13px; /* Relleno interno para espaciado */
+    border: 0; /* Sin borde */
+    outline: 1px solid yellow; /* Contorno amarillo */
+    border-radius: 8px; /* Bordes redondeados */
+    line-height: 1; /* Altura de línea compacta */
+    cursor: pointer; /* Manito al pasar el ratón */
+    transition: all ease-in-out .3s; /* Transición suave para el efecto de hover */
+}
+
+/* Efecto hover del botón de envío */
+#submit-button:hover {
+    background-color: yellow; /* Fondo amarillo al pasar el ratón */
+    color: #161616; /* Texto oscuro */
+    cursor: pointer; /* Manito de puntero */
+}
+
+/* Contenedor del enlace de inicio de sesión */
+#login-link {
+    text-align: center; /* Centrado */
+    margin-top: 20px; /* Espaciado superior para el enlace */
+    font-size: 12px; /* Tamaño de fuente */
+}
+
+/* Estilo del enlace de inicio de sesión */
+#login-link a {
+    color: yellow; /* Texto en amarillo */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Barra decorativa en la parte inferior del formulario */
+#bar {
+    position: absolute; /* Posicionamiento absoluto para ubicarse fuera del contenedor */
+    left: 50%; /* Centrado horizontal */
+    bottom: -50px; /* Posicionado por debajo del contenedor */
+    width: 28px; /* Ancho de la barra */
+    height: 8px; /* Altura de la barra */
+    margin-left: -33px; /* Ajuste de posición para centrarla */
+    background-color: yellow; /* Fondo amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Bolitas decorativas en el lado derecho de la barra */
+#bar:before,
+#bar:after {
+    content: ""; /* Elementos vacíos para crear las bolitas */
+    position: absolute; /* Posicionamiento absoluto */
+    width: 8px; /* Ancho de cada bolita */
+    height: 8px; /* Altura de cada bolita */
+    background-color: #ececec; /* Color gris claro */
+    border-radius: 50%; /* Forma circular */
+}
+
+/* Posición de la primera bolita */
+#bar:before {
+    right: -20px; /* Espacio entre la bolita y la barra */
+}
+
+/* Posición de la segunda bolita */
+#bar:after {
+    right: -38px; /* Espacio adicional para la segunda bolita */
+}

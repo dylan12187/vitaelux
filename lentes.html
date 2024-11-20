@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaelux - Catálogo de Lentes</title>
+    <link rel="stylesheet" href="lentes.css">
+</head>
+<body>
+    <header>
+        <nav class="top-menu">
+            <a href="main.html">INICIO</a>
+            <a href="lentes.html">LENTES</a>
+            <a href="promociones.html">PROMOCIONES</a>
+            <a href="paquetes.html">PAQUETES</a>
+            <a href="perfil.html">PERFIL</a>
+            <a href="soporte.html">SOPORTE</a>
+        </nav>
+        <h1 class="main-title">CATÁLOGO DE LENTES</h1>
+    </header>
+    
+    <main>
+        
+
+        <!-- Sección de filtros -->
+        <div class="filters">
+            <button onclick="filterLenses('modeloA')">Modelo A</button>
+            <button onclick="filterLenses('modeloB')">Modelo B</button>
+            <button onclick="filterLenses('modeloC')">Modelo C</button>
+            <button onclick="filterLenses('all')">Mostrar Todos</button>
+        </div>
+
+        <!-- Lista de lentes -->
+        <div class="image-list" id="image-list">
+            <div class="image-item modeloA">
+                <img src="imagenes/lentes0.jpg" alt="Lente Modelo A1">
+                <p>Lente Modelo A1</p>
+                <button class="select-button">Seleccionar</button>
+            </div>
+            <div class="image-item modeloA">
+                <img src="imagenes/lentes1.avif" alt="Lente Modelo A2">
+                <p>Lente Modelo A2</p>
+                <button class="select-button">Seleccionar</button>
+            </div>
+            <div class="image-item modeloB">
+                <img src="imagenes/lentes0.jpg" alt="Lente Modelo B1">
+                <p>Lente Modelo B1</p>
+                <button class="select-button">Seleccionar</button>
+            </div>
+            <div class="image-item modeloC">
+                <img src="imagenes/lentes4.webp" alt="Lente Modelo C1">
+                <p>Lente Modelo C1</p>
+                <button class="select-button">Seleccionar</button>
+            </div>
+            <!-- Agrega más lentes según sea necesario -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Vitaelux. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="lentes.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.top-menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top-menu ul li {
+    margin: 0 15px;
+}
+
+.top-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav.top-menu ul li a:hover {
+    color: #FFD700;
+}
+
+.main-title {
+    margin: 20px 0 0;
+    font-size: 2.5em;
+    color: #FFD700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos del contenedor del perfil */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+}
+
+.profile-container:hover {
+    transform: scale(1.02);
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #FFD700;
+}
+
+.profile-info h3,
+.profile-info p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+.account-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.edit-profile-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.edit-profile-button:hover {
+    background-color: #218838;
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el formulario de edición */
+#edit-form {
+    margin-top: 20px;
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #FFD700;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.profile-container,
+#edit-form {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Cambia a disposición vertical */
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-title {
+        font-size: 2em;
+    }
+
+    .edit-profile-button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .profile-container {
+        padding: 15px;
+    }
+
+    .profile-picture img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .edit-profile-button {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+}

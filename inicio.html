@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="inicio.css"> <!-- Enlace al nuevo archivo CSS -->
+</head>
+<body>
+    <div id="form-ui">
+        <form action="" method="post" id="form" onsubmit="handleLogin(event)">
+            <div id="form-body">
+                <div id="welcome-lines">
+                    <div id="welcome-line-1">VITAE LUX</div>
+                    <div id="welcome-line-2">Bienvenido</div>
+                </div>
+                <div id="input-area">
+                    <div class="form-inp">
+                        <input placeholder="Correo Electrónico" type="text" required>
+                    </div>
+                    <div class="form-inp">
+                        <input placeholder="Contraseña" type="password" required>
+                    </div>
+                </div>
+                <div id="submit-button-cvr">
+                    <button id="submit-button" type="submit">Iniciar Sesión</button>
+                </div>
+                
+                
+                <div id="bar"></div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Previene el envío del formulario
+            // Aquí puedes agregar lógica para autenticar al usuario
+            // Redirigir a main.html después de un inicio de sesión exitoso
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+</html>

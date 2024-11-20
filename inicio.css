@@ -1,0 +1,171 @@
+
+* {
+    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total del elemento */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+}
+
+/* Configuración general del body para centrar el contenido */
+body {
+    display: flex; /* Usa Flexbox para alinear contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Usa el 100% de la altura de la ventana */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+
+/* Contenedor principal del formulario */
+#form-ui {
+    display: grid; /* Centra el contenido internamente con Grid */
+    place-items: center; /* Alinea elementos al centro horizontal y verticalmente */
+    width: 90%; /* Usa el 90% del ancho de la pantalla */
+    max-width: 500px; /* Limita el ancho máximo a 500px */
+    padding: 50px; /* Espaciado interno */
+    background-color: #161616; /* Fondo gris oscuro */
+    box-shadow: 0px 15px 60px yellow; /* Sombra amarilla */
+    outline: 1px solid yellow; /* Borde amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Posicionamiento relativo para elementos secundarios */
+}
+
+/* Área del formulario */
+#form-body {
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+/* Encabezados de bienvenida */
+#welcome-lines {
+    text-align: center; /* Centra el texto */
+    line-height: 1; /* Compacta la altura de línea */
+}
+
+#welcome-line-1 {
+    color: yellow; /* Texto amarillo */
+    font-weight: 600; /* Negrita */
+    font-size: 2.5rem; /* Tamaño de fuente relativo a la raíz */
+}
+
+#welcome-line-2 {
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Fuente más pequeña */
+    margin-top: 1rem; /* Espaciado superior */
+}
+
+/* Área de campos de entrada */
+#input-area {
+    margin-top: 2.5rem; /* Separación del encabezado */
+}
+
+/* Campos de entrada */
+.form-inp {
+    padding: 0.7rem 1.5rem; /* Espaciado interno */
+    background: transparent; /* Fondo transparente */
+    border: 1px solid yellow; /* Borde amarillo */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Estilo de los campos al enfocar */
+.form-inp:focus {
+    border: 1px solid yellow; /* Mantiene el borde amarillo */
+}
+
+/* Entrada interna */
+.form-inp input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background: none; /* Sin fondo */
+    font-size: 1rem; /* Tamaño relativo */
+    color: yellow; /* Texto amarillo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilo del botón de envío */
+#submit-button-cvr {
+    margin-top: 1.5rem; /* Espaciado superior */
+}
+
+#submit-button {
+    display: block; /* Elemento en bloque */
+    width: 100%; /* Ancho completo */
+    color: yellow; /* Texto amarillo */
+    background-color: transparent; /* Fondo transparente */
+    font-weight: 600; /* Negrita */
+    font-size: 1rem; /* Tamaño de fuente relativo */
+    padding: 0.8rem; /* Espaciado interno */
+    border: 0; /* Sin borde */
+    outline: 1px solid yellow; /* Contorno amarillo */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia a puntero al pasar el ratón */
+    transition: all ease-in-out 0.3s; /* Transición suave */
+}
+
+#submit-button:hover {
+    background-color: yellow; /* Fondo amarillo al pasar el ratón */
+    color: #161616; /* Texto oscuro */
+}
+
+/* Enlace de inicio de sesión */
+#login-link {
+    text-align: center; /* Texto centrado */
+    margin-top: 1.5rem; /* Separación del botón */
+    font-size: 0.8rem; /* Fuente más pequeña */
+}
+
+#login-link a {
+    color: yellow; /* Texto amarillo */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Barra decorativa */
+#bar {
+    position: absolute; /* Posicionamiento absoluto */
+    left: 50%; /* Centra horizontalmente */
+    bottom: -50px; /* Posición inferior */
+    width: 28px; /* Ancho fijo */
+    height: 8px; /* Altura fija */
+    margin-left: -14px; /* Ajuste para centrar */
+    background-color: yellow; /* Fondo amarillo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#bar:before,
+#bar:after {
+    content: ""; /* Elementos vacíos para bolitas decorativas */
+    position: absolute; /* Posición relativa a #bar */
+    width: 8px; /* Tamaño fijo */
+    height: 8px; /* Tamaño fijo */
+    background-color: #ececec; /* Fondo gris claro */
+    border-radius: 50%; /* Forma redonda */
+}
+
+#bar:before {
+    right: -20px; /* Primera bolita a la derecha */
+}
+
+#bar:after {
+    right: -38px; /* Segunda bolita más alejada */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    #form-ui {
+        width: 95%; /* Mayor ancho en pantallas pequeñas */
+        padding: 20px; /* Menor relleno */
+    }
+
+    #welcome-line-1 {
+        font-size: 2rem; /* Reducir tamaño del título */
+    }
+
+    #welcome-line-2 {
+        font-size: 0.9rem; /* Reducir subtítulo */
+    }
+
+    #submit-button {
+        font-size: 0.9rem; /* Reducir texto del botón */
+        padding: 0.7rem; /* Reducir relleno del botón */
+    }
+}

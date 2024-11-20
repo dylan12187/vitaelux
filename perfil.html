@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaelux - Perfil del Usuario</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <header>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="main.html">INICIO</a></li>
+                <li><a href="lentes.html">LENTES</a></li>
+                <li><a href="promociones.html">PROMOCIONES</a></li>
+                <li><a href="paquetes.html">PAQUETES</a></li>
+                <li><a href="perfil.html">PERFIL</a></li>
+                <li><a href="soporte.html">SOPORTE</a></li>
+            </ul>
+        </nav>
+        <h1 class="main-title">PERFIL</h1>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src="imagenes/lentes0.jpg" alt="Logo de Usuario" class="user-logo">
+            </div>
+            <div class="profile-info">
+                <h3>NOMBRE:<span id="user-name"></span></h3>
+                <p>CORREO ELECTRONICO: <span id="user-email"></span></p>
+                <p>TELEFONO: <span id="user-phone">+34 123 456 789</span></p>
+                <p>FECHA DE REGISTROS: <span id="registration-date"></span></p>
+            </div>
+        </div>
+        <h3>EDITAR PERFIL</h3>
+        <div class="account-options">
+            <button class="edit-profile-button" onclick="toggleEditForm()">Editar Perfil</button>
+        </div>
+        
+        <!-- Formulario de edición -->
+        <div id="edit-form" style="display: none;">
+            <h3>Editar Información</h3>
+            <form id="profileEditForm">
+                <div class="input-group">
+                    <label for="editUsername">NOMBRE DEL USUARIO</label>
+                    <input type="text" id="editUsername" required>
+                </div>
+                <div class="input-group">
+                    <label for="editEmail">CORREO ELECTRONICO</label>
+                    <input type="email" id="editEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="editPhone">TELEFONO</label>
+                    <input type="tel" id="editPhone" required>
+                </div>
+                <button type="submit">GUARDAR CAMBIOS </button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vitaelux. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Obtener los datos de localStorage
+        const username = localStorage.getItem("username");
+        const email = localStorage.getItem("email");
+        const phone = localStorage.getItem("phone");
+        const registrationDate = new Date().toLocaleDateString(); // Obtiene la fecha actual
+
+        // Mostrar los datos en la página
+        document.getElementById("user-name").textContent = username ? username : "No disponible";
+        document.getElementById("user-email").textContent = email ? email : "No disponible";
+        document.getElementById("user-phone").textContent = phone ? phone : "No disponible";
+        document.getElementById("registration-date").textContent = registrationDate;
+
+        // Función para mostrar/ocultar el formulario de edición
+        function toggleEditForm() {
+            const editForm = document.getElementById("edit-form");
+            const isVisible = editForm.style.display === "block";
+
+            // Mostrar el formulario y llenar con datos existentes
+            if (!isVisible) {
+                editForm.style.display = "block";
+                document.getElementById("editUsername").value = username;
+                document.getElementById("editEmail").value = email;
+                document.getElementById("editPhone").value = phone;
+            } else {
+                editForm.style.display = "none";
+            }
+        }
+
+        // Manejar el envío del formulario de edición
+        document.getElementById("profileEditForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evitar el envío normal del formulario
+            
+            const newUsername = document.getElementById("editUsername").value;
+            const newEmail = document.getElementById("editEmail").value;
+            const newPhone = document.getElementById("editPhone").value;
+
+            // Actualizar los datos en localStorage
+            localStorage.setItem("username", newUsername);
+            localStorage.setItem("email", newEmail);
+            localStorage.setItem("phone", newPhone);
+
+            // Actualizar la información mostrada en la página
+            document.getElementById("user-name").textContent = newUsername;
+            document.getElementById("user-email").textContent = newEmail;
+            document.getElementById("user-phone").textContent = newPhone;
+
+            // Ocultar el formulario después de guardar los cambios
+            toggleEditForm();
+        });
+    </script>
+</body>
+</html>
